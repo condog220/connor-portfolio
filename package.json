@@ -21,7 +21,7 @@
     "vite": "^6.4.1"
   },
   "name": "portfolio-website",
-  "homepage": "https://condog220.github.io/connor-portfolio",
+  "homepage": "connorallen.uk",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
