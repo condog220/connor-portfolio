@@ -1,75 +1,39 @@
 import React from "react";
-import crossHairImage from "../img/crosshair.png"
-import trafficImage from "../img/traffic.png"
-
-const projectData = [
-    {
-        title: "AimTrainer",
-        description: "A 3D aim training game built in Unity to help players improve their accuracy and reaction time in FPS games.",
-        image: crossHairImage,
-        link: "https://github.com/condog220/Unity-AimTrainer",
-        languages: ["C#", "Unity"]
-    },
-    {
-        title: "AI Traffic Simulation",
-        description: "A traffic flow simulation developed in Unity to visualize and analyze traffic patterns and management strategies.",
-        image: trafficImage,
-        link: "https://github.com/condog220/Traffic-Management",
-        languages: ["C#", "Unity"],
-    },
-    {
-        title: "Weather App",
-        description: "Weather application that fetches real-time weather data using OpenWeather API and displays it in a user-friendly interface.",
-        image: "",
-        link: "https://github.com/condog220/Py-WeatherApp",
-        languages: ["Python", "OpenWeather API"],
-    },
-    {
-        title: "To-Do List CLI",
-        description: "A lightweight command-line tool for managing daily tasks, featuring add, list, and complete functionality.",
-        image: "",
-        link: "https://github.com/condog220/Go-ToDo",
-        languages: ["Go"]
-    },
-    {
-        title: "GitHub Trending CLI",
-        description: "A CLI utility that scrapes and displays currently trending repositories on GitHub to keep up with the latest open-source projects.",
-        image: "",
-        link: "https://github.com/condog220/GitHub-Trending-CLI",
-        languages: ["Go"],
-    },
-    {
-        title: "OOP Veterinary System",
-        description: "A management system for a veterinary clinic demonstrating Object-Oriented Programming principles in Java, handling patient records and appointments.",
-        image: "",
-        link: "",
-        languages: ["Java"],
-    },
-]
+import { FaGithub, FaLock } from "react-icons/fa";
+import projectData from "../data/projects.json";
 
 const Projects = () => {
     return (
-        <section id="projects" className="flex text-center justify-center py-20">
-            <div className="container text-center">
-                <h1 className="text-3xl font-bold">Projects</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-                    {projectData.map((project, index) => (
-                        <div key={index} className="rounded-xl p-6 border-2 border-secondary bg-secondary mb-aut">
-                            <h3 className="font-bold mb-4 text-xl">{project.title}</h3>
-                            <p className="mb-6">{project.description}</p>
-                            <div className="flex gap-2 ">
-                                {project.languages.map((languages, i) => (
-                                    <span className="rounded-full bg-primary px-3 py-1">
-                                        {languages}
+        <section id="projects" className="py-24 px-6">
+            <div className="container mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-100">Projects</h2>
+                <div className="mx-auto mt-3 mb-4 h-1 w-16 rounded-full bg-accent"></div>
+                <p className="text-gray-400 text-center mb-12">Personal projects</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projectData.map((project) => (
+                        <div key={project.title} className="flex flex-col text-left rounded-xl p-6 border border-white/10 bg-secondary shadow-lg hover:-translate-y-1 hover:border-accent/60 transition duration-200">
+                            <h3 className="font-bold mb-3 text-xl text-gray-100">{project.title}</h3>
+                            <p className="mb-6 text-gray-400">{project.description}</p>
+                            <div className="flex flex-wrap gap-2">
+                                {project.languages.map((language) => (
+                                    <span key={language} className="rounded-full bg-primary border border-white/10 px-3 py-1 text-xs text-gray-200">
+                                        {language}
                                     </span>
                                 ))}
                             </div>
-                            <div className="mt-4">
-                                <a href={project.link} className="rounded-xl bg-accent text-secondary font-bold px-3 py-2">GitHub</a>
+                            <div className="mt-auto pt-6">
+                                {project.link ? (
+                                    <a href={project.link} className="inline-flex items-center gap-2 rounded-xl bg-accent text-secondary font-bold px-4 py-2 hover:brightness-110 transition">
+                                        <FaGithub /> GitHub
+                                    </a>
+                                ) : (
+                                    <span className="inline-flex items-center gap-2 text-gray-400 text-sm">
+                                        <FaLock /> Not available to view
+                                    </span>
+                                )}
                             </div>
                         </div>
                     ))}
-
                 </div>
             </div>
         </section>

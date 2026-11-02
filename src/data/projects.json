@@ -1,0 +1,38 @@
+[
+    {
+        "title": "AimTrainer",
+        "description": "A 3D aim training game built in Unity to help players improve their accuracy and reaction time in FPS games.",
+        "link": "https://github.com/condog220/Unity-AimTrainer",
+        "languages": ["C#", "Unity"]
+    },
+    {
+        "title": "AI Traffic Simulation",
+        "description": "A traffic flow simulation developed in Unity to visualize and analyze traffic patterns and management strategies.",
+        "link": "https://github.com/condog220/Traffic-Management",
+        "languages": ["C#", "Unity"]
+    },
+    {
+        "title": "Weather App",
+        "description": "Weather application that fetches real-time weather data using OpenWeather API and displays it in a user-friendly interface.",
+        "link": "https://github.com/condog220/Py-WeatherApp",
+        "languages": ["Python", "OpenWeather API"]
+    },
+    {
+        "title": "To-Do List CLI",
+        "description": "A lightweight command-line tool for managing daily tasks, featuring add, list, and complete functionality.",
+        "link": "https://github.com/condog220/Go-ToDo",
+        "languages": ["Go"]
+    },
+    {
+        "title": "GitHub Trending CLI",
+        "description": "A CLI utility that scrapes and displays currently trending repositories on GitHub to keep up with the latest open-source projects.",
+        "link": "https://github.com/condog220/GitHub-Trending-CLI",
+        "languages": ["Go"]
+    },
+    {
+        "title": "OOP Veterinary System",
+        "description": "A management system for a veterinary clinic demonstrating Object-Oriented Programming principles in Java, handling patient records and appointments.",
+        "link": "",
+        "languages": ["Java"]
+    }
+]

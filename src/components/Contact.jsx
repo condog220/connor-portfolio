@@ -1,59 +1,27 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
+const iconLink = "flex items-center justify-center w-12 h-12 rounded-full border border-white/10 text-gray-300 hover:border-accent hover:text-accent transition-colors duration-300";
+
 const Contact = () => {
     return(
-        <section id="contact" className="">
-                <div className="container mx-auto text-center">
-                    <h1 className="text-2xl font-bold mb-12">Contact me</h1>
-                    <div className="mx-auto">
-                        <form action="#" method="POST" className="space-y-6">
-                            <div>
-                                <label htmlFor="name" className="block text-gray-300 py-4">Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    className="px-4 py-3 w-1/2 rounded-xl border-2 border-gray-600 bg-secondary"
-                                    placeholder="Your Name"
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="email" className="block text-gray-300 mb-6">Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className="px-4 py-3 w-1/2 rounded-xl border-2 border-gray-600 bg-secondary"
-                                    placeholder="youremail@example.com"
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="message" className="block text-gray-300 mb-6">Message</label>
-                                <textarea
-                                    id="message"
-                                    rows="5"
-                                    className="px-4 py-3 w-1/2 rounded-xl border-2 border-gray-600 bg-secondary"
-                                    placeholder="Your message here."
-                                ></textarea>
-                            </div>
-                            <div>
-                                <button
-                                type="submit"
-                                className="rounded-xl bg-secondary px-6 py-4 border-2 border-gray-600"
-                                >Submit</button>
-                            </div>
-                        </form>
-                        <div className="flex flex-row justify-center items-center gap-6 py-6">
-                            <a href="https://github.com/condog220" className="text-gray-300 hover:text-white transition-colors duration-300">
-                                <FaGithub size={32} />
-                            </a>
-                            <a href="https://www.linkedin.com/in/connor-allen-21912b2a3/" className="text-gray-300 hover:text-white transition-colors duration-300">
-                                <FaLinkedin size={32} />
-                            </a>
-                            <a href="mailto:connora220@outlook.com" className="text-gray-300 hover:text-white transition-colors duration-300">
-                                <FaEnvelope size={32} />
-                            </a>
-                        </div>
-                    </div>
+        <section id="contact" className="py-24 px-6">
+            <div className="container mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-100">Get in touch</h2>
+                <div className="mx-auto mt-3 mb-6 h-1 w-16 rounded-full bg-accent"></div>
+                <p className="text-gray-400 mb-8">The best way to reach me is by email or LinkedIn.</p>
+                <div className="flex flex-row justify-center items-center gap-4">
+                    <a href="https://github.com/condog220" aria-label="GitHub" className={iconLink}>
+                        <FaGithub size={22} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/connor-allen-21912b2a3/" aria-label="LinkedIn" className={iconLink}>
+                        <FaLinkedin size={22} />
+                    </a>
+                    <a href="mailto:connora220@outlook.com" aria-label="Email" className={iconLink}>
+                        <FaEnvelope size={22} />
+                    </a>
+                </div>
+                <p className="mt-6 text-gray-400">connora220@outlook.com</p>
             </div>
         </section>
     )
